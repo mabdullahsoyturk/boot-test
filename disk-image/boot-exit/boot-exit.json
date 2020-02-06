@@ -61,13 +61,9 @@
             "destination": "/home/gem5/"
         },
         {
-            "type": "shell",
-            "inline": ["mkdir /home/gem5/config-boot-tests"]
-        },
-        {
             "type": "file",
-            "source": "../config-boot-tests/",
-            "destination": "/home/gem5/config-boot-tests/",
+            "source": "../config-boot-tests",
+            "destination": "/home/gem5",
             "direction": "upload"
         },
         {
