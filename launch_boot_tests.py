@@ -112,6 +112,8 @@ if __name__ == "__main__":
             for cpu in cpu_types:
                 for num_cpu in num_cpus:
                     for mem in mem_types:
+                        print('results/run_exit/vmlinux-{}/boot-exit/{}/{}/{}/{}'.
+                            format(linux, cpu, mem, num_cpu, boot_type))
                         run = gem5Run.createFSRun(
                                 'run_name',
                             'gem5/build/X86/gem5.opt',
