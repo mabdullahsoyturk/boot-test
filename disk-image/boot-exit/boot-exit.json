@@ -67,7 +67,7 @@
         {
             "type": "file",
             "source": "../config-boot-tests/",
-            "destination": "/home/gem5/config-boot-tests",
+            "destination": "/home/gem5/config-boot-tests/",
             "direction": "upload"
         },
         {
