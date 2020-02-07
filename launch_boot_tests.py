@@ -117,7 +117,7 @@ if __name__ == "__main__":
                         run = gem5Run.createFSRun(
                                 'run_name',
                             'gem5/build/X86/gem5.opt',
-                            'configs-boot-tests/run_exit.py',
+                            'boot-tests/configs-boot-tests/run_exit.py',
                             'results/run_exit/vmlinux-{}/boot-exit/{}/{}/{}/{}'.
                             format(linux, cpu, mem, num_cpu, boot_type),
                             gem5_binary, gem5_repo, experiments_repo,
