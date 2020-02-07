@@ -122,7 +122,7 @@ if __name__ == "__main__":
                             format(linux, cpu, mem, num_cpu, boot_type),
                             gem5_binary, gem5_repo, experiments_repo,
                             os.path.join('linux-stable', 'vmlinux'+'-'+linux),
-                            'disk-image/boot-exit/boot-exit-image/boot-exit',
+                            'disk-image/boot-exit-image/boot-exit',
                             linux_binaries[linux], disk_image,
                             cpu, mem, num_cpu, boot_type,
                             timeout = 6*60*60 #6 hours
