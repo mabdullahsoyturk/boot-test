@@ -102,7 +102,7 @@ linux_binaries = {
 }
 
 if __name__ == "__main__":
-    boot_types = ['systemd']
+    boot_types = ['init']
     num_cpus = ['1']
     cpu_types = ['atomic']
     mem_types = ['classic']
