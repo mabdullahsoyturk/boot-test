@@ -62,12 +62,6 @@
         },
         {
             "type": "file",
-            "source": "../config-boot-tests",
-            "destination": "/home/gem5",
-            "direction": "upload"
-        },
-        {
-            "type": "file",
             "source": "./shared/serial-getty@.service",
             "destination": "/home/gem5/"
         },
