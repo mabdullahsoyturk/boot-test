@@ -115,16 +115,18 @@ if __name__ == "__main__":
                         print('results/run_exit/vmlinux-{}/boot-exit/{}/{}/{}/{}'.
                             format(linux, cpu, mem, num_cpu, boot_type))
                         run = gem5Run.createFSRun(
-                                'run_name',
-                            'gem5/build/X86/gem5.opt',
-                            'config-boot-tests/run_exit.py',
-                            'results/run_exit/vmlinux-{}/boot-exit/{}/{}/{}/{}'.
-                            format(linux, cpu, mem, num_cpu, boot_type),
-                            gem5_binary, gem5_repo, experiments_repo,
-                            os.path.join('linux-stable', 'vmlinux'+'-'+linux),
-                            'disk-image/boot-exit-image/boot-exit',
-                            linux_binaries[linux], disk_image,
-                            cpu, mem, num_cpu, boot_type,
-                            timeout = 6*60*60 #6 hours
+                            'run_name', # Name : str
+                            'gem5/build/X86/gem5.opt', # gem5_binary : str
+                            'config-boot-tests/run_exit.py', # run_script : str
+                            'results/run_exit/vmlinux-{}/boot-exit/{}/{}/{}/{}'.format(linux, cpu, mem, num_cpu, boot_type), # outdir
+                            gem5_binary, # gem5 artifact  
+                            gem5_repo,   # gem5_git_artifact 
+                            experiments_repo, # run script git artifact
+                            os.path.join('linux-stable', 'vmlinux'+'-'+linux), # linux_binary : str
+                            'disk-image/boot-exit-image/boot-exit', # disk_image : str
+                            linux_binaries[linux], # linux_binary_artifact 
+                            disk_image, # disk_image_artifact
+                            cpu, mem, num_cpu, boot_type, # parameters
+                            timeout = 6*60*60 # 6 hours
                             )
                         run_gem5_instance.apply_async((run,))
