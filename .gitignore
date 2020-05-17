@@ -6,4 +6,4 @@ disk-image/packer
 disk-image/boot-and-exit-image/boot-and-exit
 disk-image/packer_cache
 gem5
-kernel
+linux
