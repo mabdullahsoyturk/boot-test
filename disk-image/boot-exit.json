@@ -26,10 +26,10 @@
             "disk_size": "{{ user `image_size` }}",
             "floppy_files":
             [
-                "./shared/{{ user `preseed` }}"
+                "./{{ user `preseed` }}"
             ],
             "headless": "{{ user `headless` }}",
-            "http_directory": "./shared",
+            "http_directory": "./",
             "iso_checksum": "{{ user `iso_checksum` }}",
             "iso_checksum_type": "{{ user `iso_checksum_type` }}",
             "iso_urls": [ "{{ user `iso_url` }}" ],
@@ -52,7 +52,7 @@
     [
         {
             "type": "file",
-            "source": "./boot-exit/exit.sh",
+            "source": "./exit.sh",
             "destination": "/home/gem5/"
         },
         {
@@ -62,7 +62,7 @@
         },
         {
             "type": "file",
-            "source": "./shared/serial-getty@.service",
+            "source": "./serial-getty@.service",
             "destination": "/home/gem5/"
         },
         {
@@ -70,7 +70,7 @@
             "execute_command": "echo '{{ user `ssh_password` }}' | {{.Vars}} sudo -E -S bash '{{.Path}}'",
             "scripts":
             [
-                "./boot-exit/post-installation.sh"
+                "./post-installation.sh"
             ]
         }
     ],
@@ -92,7 +92,7 @@
         "ssh_username": "gem5",
         "vm_cpus": "16",
         "vm_memory": "8192",
-        "image_name": "boot-exit"
+        "image_name": "boot-and-exit"
   }
 
 }
