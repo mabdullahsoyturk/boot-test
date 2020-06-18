@@ -13,7 +13,6 @@ m5out
 /ext/mcpat/regression/*/*.out
 /util/m5/*.o
 /util/m5/*.a
-/util/m5/m5
 /util/packet_pb2.py
 /util/tap/*.d
 /util/tap/*.o
